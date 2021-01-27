@@ -26,13 +26,13 @@
 
 ## 图片
 
-- [Day.js](https://github.com/xx45/dayjs) - 是一个轻量的 JavaScript 时间日期处理库。
 - [baguetteBox.js](https://github.com/feimosi/baguetteBox.js) - 是一个简单易用的响应式图像灯箱效果脚本。[demo](https://feimosi.github.io/baguetteBox.js/)
 - [Lightgallery.js](https://github.com/sachinchoolur/lightgallery.js) - 是一个功能齐全的JavaScript图像灯箱插件。[demo](https://sachinchoolur.github.io/lightgallery.js/)
 - [viewerjs](https://github.com/fengyuanchen/viewerjs) - 是一个图像预览插件。[demo](https://fengyuanchen.github.io/viewerjs/)
 - [cropperjs](https://github.com/fengyuanchen/cropperjs) - 是一个图片编辑器插件。[demo](https://fengyuanchen.github.io/cropperjs/)
 - [photo-editor](https://github.com/fengyuanchen/photo-editor) - 是一个本地图片编辑器插件。[demo](https://fengyuanchen.github.io/photo-editor/)
 - [blazy.js](https://github.com/dinbror/blazy/) - 是一个懒惰加载插件。[demo](http://dinbror.dk/blazy/)
+- [tesseract.js](https://github.com/naptha/tesseract.js) - 可以从图像中获取几乎任何语言的单词。[demo](http://tesseract.projectnaptha.com/)
 
 ## 布局
 
@@ -63,7 +63,7 @@
 
 - [MediumEditor](https://github.com/yabwe/medium-editor) - 仿Medium.com的所见即所得在线编辑器工具栏。[demo](https://yabwe.github.io/medium-editor/)
 - [Substance](https://github.com/yabwe/medium-editor) - 是一个基于Web的内容自定义编辑器。[demo](http://substance.io/examples/)
-- [flatpickr](https://github.com/chmln/flatpickr) - 是一个轻量级的代码高亮库，适用于任何编程语言。[demo](https://chmln.github.io/flatpickr)
+- [rainbows](https://github.com/ccampbell/rainbow) - 是一个轻量级的代码高亮库(2.5kb)。[demo](https://craig.is/making/rainbows)
 - [pen](https://github.com/sofish/pen) - 是一个Markdown编辑器工具。[demo](http://sofish.github.io/pen)
 - [aceAce](https://github.com/ajaxorg/ace)（Ajax.org Cloud9 Editor）。[demo](https://ace.c9.io/)
 - [CodeMirror](https://github.com/codemirror/CodeMirror)浏览器端的代码编辑器。[demo](http://codemirror.net/)
@@ -134,12 +134,15 @@
 - [Mojs](https://github.com/legomushroom/mojs) - 一个拥有极简的声明式 API ，能够轻松掌控运动轨迹，为运动图形而生的工具库。[demo](http://mojs.io/)
 - [React FLIP Move](https://github.com/joshwcomeau/react-flip-move) - 一个翻转移动的库，旨在解决当列表的顺序发生变化时，项目列表动画化的问题。[demo](http://joshwcomeau.github.io/react-flip-move/examples/#/shuffle?_k=og3e8m)
 - [tween.js](https://github.com/tweenjs/tween.js) - 是一个JS 平滑动画库。[demo](http://tweenjs.github.io/tween.js/examples/12_graphs_custom_functions.html)
+- [Typed.js](https://github.com/mattboldt/typed.js) - 是一个JS 打字动画库。[demo](https://mattboldt.com/typed.js/)
 - [vivus](https://github.com/maxwellito/vivus) - JavaScript库，使SVG绘制动画。[demo](http://maxwellito.github.io/vivus/)
 - [Choreographer-js](https://github.com/christinecha/choreographer-js) - 是一个用于处理复杂动画的简单库。[demo](https://christinecha.github.io/choreographer-js/)
 - [minirefresh](https://github.com/minirefresh/minirefresh) - 优雅的H5下拉刷新。零依赖。[demo](https://minirefresh.github.io/minirefresh-doc/minirefresh-doc/guid/guid_effect.html)
 
 ## 时间
 
+- [Day.js](https://github.com/xx45/dayjs) - 是一个轻量的 JavaScript 时间日期处理库。
+- [dayjs](https://github.com/iamkun/dayjs) 只有2KB日期库，替代Moment.js，具有相同的现代API。
 - [moment](https://github.com/moment/moment) - 是一个日期处理类库,用于解析、检验、操作、以及显示日期。[demo](http://momentjs.com)
 - [date-fns](https://github.com/date-fns/date-fns) - 现代JavaScript日期实用程序库。[demo](https://date-fns.org/)
 - [luxon](https://github.com/moment/luxon) - 在JS中使用日期和时间的库。[demo](https://moment.github.io/luxon/)
@@ -154,6 +157,7 @@
 ## 其它
 
 - [hotkeys](https://github.com/jaywcjlove/hotkeys) - 是一个强健的 Javascript 库用于捕获键盘输入和输入的组合键。[demo](http://jaywcjlove.github.io/hotkeys/ )
+- [isMobile](https://github.com/kaimallea/isMobile) - 一个检测移动设备的简单JS库。
 - [clipboard.js](https://github.com/zenorocha/clipboard.js) - 现代复制到剪贴板。没有Flash，gzip压缩只有3KB 。[demo](https://clipboardjs.com/)
 - [translater.js](https://github.com/jaywcjlove/onlinenetwork) - 这是一个利用HTML注释的页面翻译解决方案。[demo](https://jaywcjlove.github.io/translater.js/)
 - [scrollama](https://github.com/russellgoldenberg/scrollama) - 为 Scrollytelling 开发的现代、轻量级的 JavaScript 库。[demo](https://russellgoldenberg.github.io/scrollama/basic)

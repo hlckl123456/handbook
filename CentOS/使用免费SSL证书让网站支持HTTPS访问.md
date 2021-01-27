@@ -5,6 +5,7 @@
 
 <!-- TOC -->
 
+- [使用免费SSL证书让网站支持HTTPS访问](#使用免费ssl证书让网站支持https访问)
 - [certbot-auto](#certbot-auto)
   - [安装](#安装)
   - [申请证书](#申请证书)
@@ -20,6 +21,7 @@
     - [报nginx配置文件目录不对错误](#报nginx配置文件目录不对错误)
     - [正式申请申请证书](#正式申请申请证书)
   - [配置nginx](#配置nginx)
+- [错误处理](#错误处理)
 - [参考阅读](#参考阅读)
 
 <!-- /TOC -->
@@ -45,7 +47,11 @@ chmod a+x certbot-auto
 ```bash
 # 注xxx.com请根据自己的域名自行更改
 ./certbot-auto --server https://acme-v02.api.letsencrypt.org/directory -d "*.xxx.com" --manual --preferred-challenges dns-01 certonly
+
+sudo ./certbot-auto certonly --standalone --email my@qq.com -d abc.com -d www.abc.com
 ```
+
+选项 `--no-self-upgrade`。certbot-auto默认始终尝试更新到最新版，但对已经稳定的应用而言，可以不用更新，因此可以使用此选项直接更新证书，而不用更新certbot-auto导致其它意外问题。
 
 从服务器到目的地的出站端口 443 是否被防火墙阻止
 
@@ -141,6 +147,7 @@ IMPORTANT NOTES:
 ```bash
 certbot-auto renew
 certbot-auto delete -d chat.xxx.cn # 删除证书
+./certbot-auto delete --cert-name xxx.com # 删除证书重新生成
 ```
 
 ⚠️ 注意这里会有升级操作，并且有安装 Python 包，有时候会非常慢，不要停止，停止操作可能会造成麻烦。
@@ -149,6 +156,12 @@ certbot-auto delete -d chat.xxx.cn # 删除证书
 
 ```bash
 openssl x509 -noout -dates -in /etc/letsencrypt/live/<你的域名>/cert.pem
+```
+
+简单的查看方法
+
+```bash
+certbot-auto certificates 
 ```
 
 ### nginx应用该证书的例子
@@ -348,6 +361,23 @@ server {
     index  index.html index.htm;
   }
 }
+```
+
+## 错误处理
+
+1. 证书提示 certbot-auto 无法升级
+
+```bash
+[root@localhost ~]# ./certbot-auto certificates
+Upgrading certbot-auto 1.0.0 to 1.3.0...
+Couldn't download https://raw.githubusercontent.com/certbot/certbot/v1.3.0/letsencrypt-auto-source/letsencrypt-auto. <urlopen error [Errno 111] Connection refused>
+```
+`certbot-auto` 将始终尝试从最新版本中获取自身的最新版本。
+
+解决办法：如果希望将其锁定到特定版本并且不接收自动更新，只需在命令后加 --no-self-upgrade 即可
+
+```
+./certbot-auto certificates  --no-self-upgrade
 ```
 
 ## 参考阅读
